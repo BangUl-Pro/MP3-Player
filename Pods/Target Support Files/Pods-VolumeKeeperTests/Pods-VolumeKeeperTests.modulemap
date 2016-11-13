@@ -1,0 +1,6 @@
+framework module Pods_VolumeKeeperTests {
+  umbrella header "Pods-VolumeKeeperTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
