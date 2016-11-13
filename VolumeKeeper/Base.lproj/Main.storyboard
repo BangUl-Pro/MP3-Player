@@ -76,6 +76,13 @@
                                     <action selector="prevSongPlayPressed:" destination="V2r-yE-A4k" eventType="touchUpInside" id="wqR-Y3-PEi"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wEV-3z-1ZR">
+                                <rect key="frame" x="307" y="621" width="60" height="30"/>
+                                <state key="normal" title="전 곡 반복"/>
+                                <connections>
+                                    <action selector="changeRepeatModePressed:" destination="V2r-yE-A4k" eventType="touchUpInside" id="2BX-UO-vzO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -83,12 +90,15 @@
                             <constraint firstItem="bnN-Pp-2FP" firstAttribute="centerX" secondItem="ukC-4y-3Bc" secondAttribute="centerX" id="D4V-Jz-z65"/>
                             <constraint firstItem="bnN-Pp-2FP" firstAttribute="leading" secondItem="Ofw-6P-7OA" secondAttribute="trailing" constant="20" id="Hoi-Nl-h2j"/>
                             <constraint firstItem="Ofw-6P-7OA" firstAttribute="centerY" secondItem="bnN-Pp-2FP" secondAttribute="centerY" id="TAm-mF-u5d"/>
+                            <constraint firstAttribute="trailing" secondItem="wEV-3z-1ZR" secondAttribute="trailing" constant="8" id="Yee-Bx-kZp"/>
+                            <constraint firstItem="wEV-3z-1ZR" firstAttribute="centerY" secondItem="bnN-Pp-2FP" secondAttribute="centerY" id="b1u-K0-loE"/>
                             <constraint firstItem="tJr-d0-kCo" firstAttribute="centerY" secondItem="bnN-Pp-2FP" secondAttribute="centerY" id="gK7-Ew-Mtf"/>
                             <constraint firstItem="tJr-d0-kCo" firstAttribute="leading" secondItem="bnN-Pp-2FP" secondAttribute="trailing" constant="20" id="vod-Da-5YW"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="playPauseBtn" destination="bnN-Pp-2FP" id="aYf-89-w1s"/>
+                        <outlet property="repeatBtn" destination="wEV-3z-1ZR" id="HLz-dc-fte"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLb-tB-rhU" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -18,13 +18,14 @@ class MusicListTableViewCell: UITableViewCell {
     @IBOutlet weak var albumLabel: UILabel!
     
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
         
         titleLabel.type = .continuous
         titleLabel.trailingBuffer = 30
         titleLabel.fadeLength = 10
-        titleLabel.speed = .duration(8)
+        titleLabel.speed = .duration(16)
         titleLabel.textAlignment = .left
     }
 }
