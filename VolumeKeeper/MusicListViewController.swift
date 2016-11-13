@@ -50,7 +50,7 @@ extension MusicListViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as? MusicLIstTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as? MusicListTableViewCell
         guard let musicListCell = cell else {
             return UITableViewCell()
         }
@@ -65,5 +65,13 @@ extension MusicListViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         return musicListCell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "MusicListeningViewController") as? MusicListeningViewController
+        viewController?.music = self.viewModel.musicList[indexPath.row]
+        self.navigationController?.pushViewController(viewController!, animated: true)
     }
 }

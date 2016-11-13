@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import MediaPlayer
 
-class ViewController: UIViewController {
+class MusicListeningViewController: UIViewController {
+    
+    var music: MPMediaItem!
     
     @IBOutlet weak var playPauseBtn: UIButton!
     

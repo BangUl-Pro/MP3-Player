@@ -43,11 +43,10 @@
             </objects>
             <point key="canvasLocation" x="972" y="-246.02698650674665"/>
         </scene>
-        <!--View Controller-->
+        <!--Music Listening View Controller-->
         <scene sceneID="1Ai-Wv-iJk">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SLb-tB-rhU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="V2r-yE-A4k" customClass="ViewController" customModule="VolumeKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MusicListeningViewController" id="V2r-yE-A4k" customClass="MusicListeningViewController" customModule="VolumeKeeper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hgs-dB-IxN"/>
                         <viewControllerLayoutGuide type="bottom" id="CVq-4u-1R5"/>
@@ -92,13 +91,13 @@
                         <outlet property="playPauseBtn" destination="bnN-Pp-2FP" id="aYf-89-w1s"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SLb-tB-rhU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1810" y="-246"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="k4I-1I-SHg">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gsD-gA-quj" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jzq-PE-PDP" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HoE-Jf-5cK">
@@ -110,6 +109,7 @@
                         <segue destination="fxX-Je-6h0" kind="relationship" relationship="rootViewController" id="VUk-fU-Fqh"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gsD-gA-quj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="-246.02698650674665"/>
         </scene>

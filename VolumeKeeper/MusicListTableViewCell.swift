@@ -9,7 +9,7 @@
 import UIKit
 import MarqueeLabel
 
-class MusicLIstTableViewCell: UITableViewCell {
+class MusicListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleImageView: UIImageView!
     

@@ -22,9 +22,9 @@
 		9055AF141DD6B675008CB049 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9055AF131DD6B675008CB049 /* ViewModel.swift */; };
 		9055AF161DD6B685008CB049 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9055AF151DD6B685008CB049 /* Service.swift */; };
 		90C2C5101DD7732D009609F1 /* MusicListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90C2C50F1DD7732D009609F1 /* MusicListCell.xib */; };
-		90C2C5131DD7F5D5009609F1 /* MusicLIstTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C2C5121DD7F5D5009609F1 /* MusicLIstTableViewCell.swift */; };
+		90C2C5131DD7F5D5009609F1 /* MusicListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C2C5121DD7F5D5009609F1 /* MusicListTableViewCell.swift */; };
 		90C2C5151DD7F79A009609F1 /* MusicListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C2C5141DD7F79A009609F1 /* MusicListCellViewModel.swift */; };
-		90C2C5171DD7FD35009609F1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C2C5161DD7FD35009609F1 /* ViewController.swift */; };
+		90C2C5171DD7FD35009609F1 /* MusicListeningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C2C5161DD7FD35009609F1 /* MusicListeningViewController.swift */; };
 		E3E1BAAB6921F1DA4120E9D8 /* Pods_VolumeKeeperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D7E26BBCE017B0AB3CDB063 /* Pods_VolumeKeeperTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,9 +71,9 @@
 		9055AF131DD6B675008CB049 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		9055AF151DD6B685008CB049 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		90C2C50F1DD7732D009609F1 /* MusicListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicListCell.xib; sourceTree = "<group>"; };
-		90C2C5121DD7F5D5009609F1 /* MusicLIstTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicLIstTableViewCell.swift; sourceTree = "<group>"; };
+		90C2C5121DD7F5D5009609F1 /* MusicListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicListTableViewCell.swift; sourceTree = "<group>"; };
 		90C2C5141DD7F79A009609F1 /* MusicListCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicListCellViewModel.swift; sourceTree = "<group>"; };
-		90C2C5161DD7FD35009609F1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		90C2C5161DD7FD35009609F1 /* MusicListeningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicListeningViewController.swift; sourceTree = "<group>"; };
 		9D7E26BBCE017B0AB3CDB063 /* Pods_VolumeKeeperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VolumeKeeperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE3355DC59394FE8657E5D38 /* Pods_VolumeKeeper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VolumeKeeper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F256770B3B3CD528BEA25DC4 /* Pods-VolumeKeeperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VolumeKeeperTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VolumeKeeperTests/Pods-VolumeKeeperTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -220,7 +220,7 @@
 		9055AF121DD6B4C5008CB049 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				90C2C5161DD7FD35009609F1 /* ViewController.swift */,
+				90C2C5161DD7FD35009609F1 /* MusicListeningViewController.swift */,
 				9055AEFD1DD60FAB008CB049 /* MusicList */,
 			);
 			name = App;
@@ -237,7 +237,7 @@
 		90C2C5111DD7F5BA009609F1 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				90C2C5121DD7F5D5009609F1 /* MusicLIstTableViewCell.swift */,
+				90C2C5121DD7F5D5009609F1 /* MusicListTableViewCell.swift */,
 				90C2C5141DD7F79A009609F1 /* MusicListCellViewModel.swift */,
 			);
 			name = Cell;
@@ -411,7 +411,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		4431162518B7CA2AE1AAF274 /* [CP] Copy Pods Resources */ = {
@@ -486,7 +486,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		E14E3D8EB150475A9614BEBB /* [CP] Check Pods Manifest.lock */ = {
@@ -501,7 +501,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		ECABE3FD07F7DB7D810C9210 /* [CP] Embed Pods Frameworks */ = {
@@ -541,8 +541,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90C2C5171DD7FD35009609F1 /* ViewController.swift in Sources */,
-				90C2C5131DD7F5D5009609F1 /* MusicLIstTableViewCell.swift in Sources */,
+				90C2C5171DD7FD35009609F1 /* MusicListeningViewController.swift in Sources */,
+				90C2C5131DD7F5D5009609F1 /* MusicListTableViewCell.swift in Sources */,
 				9055AEFF1DD61021008CB049 /* MusicListViewController.swift in Sources */,
 				9055AF161DD6B685008CB049 /* Service.swift in Sources */,
 				9055AF0B1DD61572008CB049 /* MusicListTableViewModel.swift in Sources */,

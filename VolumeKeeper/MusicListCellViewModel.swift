@@ -16,16 +16,4 @@ class MusicListCellViewModel {
     init(music: MPMediaItem) {
         self.music = music
     }
-    
-    
-    // 미리 듣기
-    func preListening() {
-        
-    }
-    
-    
-    // 곡 듣기
-    func listen() {
-        
-    }
 }
