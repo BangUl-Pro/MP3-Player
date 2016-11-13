@@ -10,7 +10,6 @@ import Foundation
 import MediaPlayer
 
 class MusicPlayingViewModel {
-    var music: MPMediaItem!
-    
-    
+    var index = 0
+    var musicList: MPMediaItemCollection = MPMediaItemCollection(items: [])
 }

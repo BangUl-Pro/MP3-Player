@@ -71,7 +71,8 @@ extension MusicListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let viewController = storyboard.instantiateViewController(withIdentifier: "MusicPlayingViewController") as? MusicPlayingViewController
-        viewController?.viewModel.music = self.viewModel.musicList[indexPath.row]
+        viewController?.viewModel.musicList = MPMediaItemCollection(items: self.viewModel.musicList)
+        viewController?.viewModel.index = indexPath.row
         self.navigationController?.pushViewController(viewController!, animated: true)
     }
 }
