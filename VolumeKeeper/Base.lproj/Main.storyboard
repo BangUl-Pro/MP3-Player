@@ -56,14 +56,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJr-d0-kCo">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJr-d0-kCo">
                                 <rect key="frame" x="222" y="579" width="43" height="30"/>
                                 <state key="normal" title="다음 곡"/>
                                 <connections>
                                     <action selector="nextSongPlayPressed:" destination="V2r-yE-A4k" eventType="touchUpInside" id="8L3-Xs-w8v"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ofw-6P-7OA">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ofw-6P-7OA">
                                 <rect key="frame" x="109" y="579" width="43" height="30"/>
                                 <state key="normal" title="이전 곡"/>
                                 <connections>
@@ -77,15 +77,6 @@
                                     <action selector="changeRepeatModePressed:" destination="V2r-yE-A4k" eventType="touchUpInside" id="2BX-UO-vzO"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="eZL-wP-qqg">
-                                <rect key="frame" x="52" y="617" width="169" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="165" id="mbf-nl-Cno"/>
-                                </constraints>
-                                <connections>
-                                    <action selector="volumeChanged:" destination="V2r-yE-A4k" eventType="valueChanged" id="igj-ih-Ugb"/>
-                                </connections>
-                            </slider>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Se7-ro-kFZ">
                                 <rect key="frame" x="16" y="617" width="30" height="30"/>
                                 <constraints>
@@ -100,29 +91,37 @@
                                     <action selector="changeSequenceModePressed:" destination="V2r-yE-A4k" eventType="touchUpInside" id="giU-WN-3bB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnN-Pp-2FP">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnN-Pp-2FP">
                                 <rect key="frame" x="172" y="579" width="30" height="30"/>
                                 <state key="normal" title="재생"/>
                                 <connections>
                                     <action selector="playPausePressed:" destination="V2r-yE-A4k" eventType="touchUpInside" id="hcu-9h-e2d"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SFB-qe-EWz">
+                                <rect key="frame" x="54" y="617" width="191" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="191" id="RPc-xX-DLC"/>
+                                    <constraint firstAttribute="height" constant="30" id="w2E-ZJ-lNo"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="S8d-aa-CvB" firstAttribute="trailing" secondItem="ukC-4y-3Bc" secondAttribute="trailingMargin" id="0d0-xQ-3La"/>
                             <constraint firstItem="Se7-ro-kFZ" firstAttribute="leading" secondItem="ukC-4y-3Bc" secondAttribute="leadingMargin" id="3j4-ui-aUf"/>
+                            <constraint firstItem="SFB-qe-EWz" firstAttribute="centerY" secondItem="Se7-ro-kFZ" secondAttribute="centerY" id="5ES-bm-qEO"/>
                             <constraint firstItem="S8d-aa-CvB" firstAttribute="leading" secondItem="wEV-3z-1ZR" secondAttribute="trailing" constant="16" id="Aeu-Gc-Jqe"/>
                             <constraint firstItem="bnN-Pp-2FP" firstAttribute="centerX" secondItem="ukC-4y-3Bc" secondAttribute="centerX" id="D4V-Jz-z65"/>
                             <constraint firstItem="bnN-Pp-2FP" firstAttribute="leading" secondItem="Ofw-6P-7OA" secondAttribute="trailing" constant="20" id="Hoi-Nl-h2j"/>
                             <constraint firstItem="S8d-aa-CvB" firstAttribute="centerY" secondItem="Se7-ro-kFZ" secondAttribute="centerY" id="K22-PQ-gHY"/>
+                            <constraint firstItem="SFB-qe-EWz" firstAttribute="leading" secondItem="Se7-ro-kFZ" secondAttribute="trailing" constant="8" id="K56-zd-FqM"/>
                             <constraint firstItem="Ofw-6P-7OA" firstAttribute="centerY" secondItem="bnN-Pp-2FP" secondAttribute="centerY" id="TAm-mF-u5d"/>
                             <constraint firstItem="wEV-3z-1ZR" firstAttribute="centerY" secondItem="Se7-ro-kFZ" secondAttribute="centerY" id="X5L-53-0gT"/>
                             <constraint firstItem="CVq-4u-1R5" firstAttribute="top" secondItem="Se7-ro-kFZ" secondAttribute="bottom" constant="20" id="g5E-i1-5xL"/>
                             <constraint firstItem="tJr-d0-kCo" firstAttribute="centerY" secondItem="bnN-Pp-2FP" secondAttribute="centerY" id="gK7-Ew-Mtf"/>
-                            <constraint firstItem="eZL-wP-qqg" firstAttribute="leading" secondItem="Se7-ro-kFZ" secondAttribute="trailing" constant="8" id="gOf-aR-4FD"/>
-                            <constraint firstItem="eZL-wP-qqg" firstAttribute="top" secondItem="bnN-Pp-2FP" secondAttribute="bottom" constant="8" id="nwQ-YD-hJG"/>
-                            <constraint firstItem="eZL-wP-qqg" firstAttribute="centerY" secondItem="Se7-ro-kFZ" secondAttribute="centerY" id="rQV-Nd-ZDn"/>
+                            <constraint firstItem="wEV-3z-1ZR" firstAttribute="leading" secondItem="SFB-qe-EWz" secondAttribute="trailing" constant="8" id="ovj-85-N9d"/>
                             <constraint firstItem="tJr-d0-kCo" firstAttribute="leading" secondItem="bnN-Pp-2FP" secondAttribute="trailing" constant="20" id="vod-Da-5YW"/>
                         </constraints>
                     </view>
@@ -130,7 +129,7 @@
                         <outlet property="changeSequenceBtn" destination="S8d-aa-CvB" id="ENe-Yx-z0r"/>
                         <outlet property="playPauseBtn" destination="bnN-Pp-2FP" id="aYf-89-w1s"/>
                         <outlet property="repeatBtn" destination="wEV-3z-1ZR" id="HLz-dc-fte"/>
-                        <outlet property="volumeSlider" destination="eZL-wP-qqg" id="sRz-gT-U0i"/>
+                        <outlet property="volumeFrame" destination="SFB-qe-EWz" id="26Z-3N-yWY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLb-tB-rhU" userLabel="First Responder" sceneMemberID="firstResponder"/>

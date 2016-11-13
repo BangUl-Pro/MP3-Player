@@ -14,13 +14,12 @@ class MusicPlayingViewController: UIViewController {
     var viewModel = MusicPlayingViewModel()
    
     let musicPlayer = MPMusicPlayerController()
-    let session = AVAudioSession.init()
-    let volumeView = MPVolumeView()
+    var volumeView: MPVolumeView!
     
     @IBOutlet weak var playPauseBtn: UIButton!
     @IBOutlet weak var repeatBtn: UIButton!
     @IBOutlet weak var changeSequenceBtn: UIButton!
-    @IBOutlet weak var volumeSlider: UISlider!
+    @IBOutlet weak var volumeFrame: UIView!
     
     @IBAction func playPausePressed(_ sender: UIButton) {
         if musicPlayer.playbackState == .playing {
@@ -61,12 +60,6 @@ class MusicPlayingViewController: UIViewController {
         }
     }
     
-    @IBAction func volumeChanged(_ sender: Any) {
-        if let view = volumeView.subviews.first as? UISlider {
-            view.setValue(volumeSlider.value, animated: true)
-        }
-    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -92,7 +85,8 @@ class MusicPlayingViewController: UIViewController {
             repeatBtn.setTitle("반복 X", for: .normal)
         }
         
-        volumeSlider.setValue(session.outputVolume, animated: false)
+        volumeView = MPVolumeView(frame: volumeFrame.bounds)
+        volumeFrame.addSubview(volumeView)
     }
 }
 
