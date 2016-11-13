@@ -24,7 +24,8 @@
 		90C2C5101DD7732D009609F1 /* MusicListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90C2C50F1DD7732D009609F1 /* MusicListCell.xib */; };
 		90C2C5131DD7F5D5009609F1 /* MusicListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C2C5121DD7F5D5009609F1 /* MusicListTableViewCell.swift */; };
 		90C2C5151DD7F79A009609F1 /* MusicListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C2C5141DD7F79A009609F1 /* MusicListCellViewModel.swift */; };
-		90C2C5171DD7FD35009609F1 /* MusicListeningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C2C5161DD7FD35009609F1 /* MusicListeningViewController.swift */; };
+		90C2C5171DD7FD35009609F1 /* MusicPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C2C5161DD7FD35009609F1 /* MusicPlayingViewController.swift */; };
+		90C2C51A1DD82011009609F1 /* MusicPlayingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C2C5191DD82011009609F1 /* MusicPlayingViewModel.swift */; };
 		E3E1BAAB6921F1DA4120E9D8 /* Pods_VolumeKeeperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D7E26BBCE017B0AB3CDB063 /* Pods_VolumeKeeperTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,7 +74,8 @@
 		90C2C50F1DD7732D009609F1 /* MusicListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicListCell.xib; sourceTree = "<group>"; };
 		90C2C5121DD7F5D5009609F1 /* MusicListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicListTableViewCell.swift; sourceTree = "<group>"; };
 		90C2C5141DD7F79A009609F1 /* MusicListCellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicListCellViewModel.swift; sourceTree = "<group>"; };
-		90C2C5161DD7FD35009609F1 /* MusicListeningViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicListeningViewController.swift; sourceTree = "<group>"; };
+		90C2C5161DD7FD35009609F1 /* MusicPlayingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayingViewController.swift; sourceTree = "<group>"; };
+		90C2C5191DD82011009609F1 /* MusicPlayingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlayingViewModel.swift; sourceTree = "<group>"; };
 		9D7E26BBCE017B0AB3CDB063 /* Pods_VolumeKeeperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VolumeKeeperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE3355DC59394FE8657E5D38 /* Pods_VolumeKeeper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VolumeKeeper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F256770B3B3CD528BEA25DC4 /* Pods-VolumeKeeperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VolumeKeeperTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VolumeKeeperTests/Pods-VolumeKeeperTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -220,7 +222,7 @@
 		9055AF121DD6B4C5008CB049 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				90C2C5161DD7FD35009609F1 /* MusicListeningViewController.swift */,
+				90C2C5181DD82001009609F1 /* MusicPlaying */,
 				9055AEFD1DD60FAB008CB049 /* MusicList */,
 			);
 			name = App;
@@ -241,6 +243,15 @@
 				90C2C5141DD7F79A009609F1 /* MusicListCellViewModel.swift */,
 			);
 			name = Cell;
+			sourceTree = "<group>";
+		};
+		90C2C5181DD82001009609F1 /* MusicPlaying */ = {
+			isa = PBXGroup;
+			children = (
+				90C2C5161DD7FD35009609F1 /* MusicPlayingViewController.swift */,
+				90C2C5191DD82011009609F1 /* MusicPlayingViewModel.swift */,
+			);
+			name = MusicPlaying;
 			sourceTree = "<group>";
 		};
 		BD16DA29CF48CC93B2D128AB /* Pods */ = {
@@ -541,10 +552,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90C2C5171DD7FD35009609F1 /* MusicListeningViewController.swift in Sources */,
+				90C2C5171DD7FD35009609F1 /* MusicPlayingViewController.swift in Sources */,
 				90C2C5131DD7F5D5009609F1 /* MusicListTableViewCell.swift in Sources */,
 				9055AEFF1DD61021008CB049 /* MusicListViewController.swift in Sources */,
 				9055AF161DD6B685008CB049 /* Service.swift in Sources */,
+				90C2C51A1DD82011009609F1 /* MusicPlayingViewModel.swift in Sources */,
 				9055AF0B1DD61572008CB049 /* MusicListTableViewModel.swift in Sources */,
 				9055AF101DD6ACEC008CB049 /* MusicModel.swift in Sources */,
 				9055AEFC1DD5E617008CB049 /* PlayerViewModel.swift in Sources */,

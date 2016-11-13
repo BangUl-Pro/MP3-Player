@@ -43,10 +43,10 @@
             </objects>
             <point key="canvasLocation" x="972" y="-246.02698650674665"/>
         </scene>
-        <!--Music Listening View Controller-->
+        <!--Music Playing View Controller-->
         <scene sceneID="1Ai-Wv-iJk">
             <objects>
-                <viewController storyboardIdentifier="MusicListeningViewController" id="V2r-yE-A4k" customClass="MusicListeningViewController" customModule="VolumeKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MusicPlayingViewController" id="V2r-yE-A4k" customClass="MusicPlayingViewController" customModule="VolumeKeeper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hgs-dB-IxN"/>
                         <viewControllerLayoutGuide type="bottom" id="CVq-4u-1R5"/>

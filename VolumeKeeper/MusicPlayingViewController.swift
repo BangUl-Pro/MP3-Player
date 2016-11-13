@@ -9,9 +9,9 @@
 import UIKit
 import MediaPlayer
 
-class MusicListeningViewController: UIViewController {
+class MusicPlayingViewController: UIViewController {
     
-    var music: MPMediaItem!
+    var viewModel = MusicPlayingViewModel()
     
     @IBOutlet weak var playPauseBtn: UIButton!
     
@@ -27,6 +27,11 @@ class MusicListeningViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let musicPlayer = MPMusicPlayerController()
+        let a = MPMediaItemCollection(items: [viewModel.music])
+        musicPlayer.setQueue(with: a)
+        musicPlayer.play()
     }
 }
 
