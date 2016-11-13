@@ -24,6 +24,8 @@ class MusicPlayingViewController: UIViewController {
     @IBOutlet weak var changeSequenceBtn: UIButton!
     @IBOutlet weak var volumeFrame: UIView!
     @IBOutlet weak var playTimeSlider: UISlider!
+    @IBOutlet weak var startTimeLabel: UILabel!
+    @IBOutlet weak var endTimeLabel: UILabel!
     
     
     @IBAction func playPausePressed(_ sender: UIButton) {
@@ -104,6 +106,8 @@ class MusicPlayingViewController: UIViewController {
         
         thread = Thread(target: self, selector: #selector(MusicPlayingViewController.loop), object: nil)
         thread.start()
+        
+        endTimeLabel.text = "\(Int(playTimeSlider.maximumValue) / 60) : \(Int(playTimeSlider.maximumValue) % 60)"
     }
     
     func loop() {
@@ -111,6 +115,7 @@ class MusicPlayingViewController: UIViewController {
             if isPlaying {
                 DispatchQueue.main.async {
                     self.playTimeSlider.setValue(self.playTimeSlider.value + 1, animated: true)
+                    self.startTimeLabel.text = "\(Int(self.playTimeSlider.value) / 60) : \(Int(self.playTimeSlider.value) % 60)"
                 }
             }
             Thread.sleep(forTimeInterval: 1)
