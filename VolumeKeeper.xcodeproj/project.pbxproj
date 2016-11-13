@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		46B3C34074CA9329BBC37949 /* Pods_VolumeKeeperUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A0FE228D2AD816A1037538 /* Pods_VolumeKeeperUITests.framework */; };
 		78B93B2A5F43FF27B33575B2 /* Pods_VolumeKeeper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE3355DC59394FE8657E5D38 /* Pods_VolumeKeeper.framework */; };
+		902D6DDB1DD85EA50096060A /* LyricsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 902D6DDA1DD85EA50096060A /* LyricsView.xib */; };
+		902D6DDD1DD85EDB0096060A /* LyricsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902D6DDC1DD85EDB0096060A /* LyricsView.swift */; };
 		902E49D41DD5DC2100BB817D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902E49D31DD5DC2100BB817D /* AppDelegate.swift */; };
 		902E49D91DD5DC2100BB817D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 902E49D71DD5DC2100BB817D /* Main.storyboard */; };
 		902E49DB1DD5DC2100BB817D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 902E49DA1DD5DC2100BB817D /* Assets.xcassets */; };
@@ -53,6 +55,8 @@
 		48557C9D94D87BAC36D854FB /* Pods-VolumeKeeper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VolumeKeeper.release.xcconfig"; path = "Pods/Target Support Files/Pods-VolumeKeeper/Pods-VolumeKeeper.release.xcconfig"; sourceTree = "<group>"; };
 		48638C724B70F13073294FE5 /* Pods-VolumeKeeper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VolumeKeeper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VolumeKeeper/Pods-VolumeKeeper.debug.xcconfig"; sourceTree = "<group>"; };
 		52A0FE228D2AD816A1037538 /* Pods_VolumeKeeperUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VolumeKeeperUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		902D6DDA1DD85EA50096060A /* LyricsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LyricsView.xib; sourceTree = "<group>"; };
+		902D6DDC1DD85EDB0096060A /* LyricsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LyricsView.swift; sourceTree = "<group>"; };
 		902E49D01DD5DC2100BB817D /* VolumeKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VolumeKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		902E49D31DD5DC2100BB817D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		902E49D81DD5DC2100BB817D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -119,6 +123,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		902D6DD91DD85E8F0096060A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				902D6DDA1DD85EA50096060A /* LyricsView.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		902E49C71DD5DC2100BB817D = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +189,7 @@
 		902E4A011DD5E00A00BB817D /* UserInterfaces */ = {
 			isa = PBXGroup;
 			children = (
+				902D6DD91DD85E8F0096060A /* View */,
 				90C2C50E1DD7730D009609F1 /* Cells */,
 				902E4A021DD5E01600BB817D /* Storyboards */,
 			);
@@ -224,6 +237,7 @@
 			children = (
 				90C2C5181DD82001009609F1 /* MusicPlaying */,
 				9055AEFD1DD60FAB008CB049 /* MusicList */,
+				902D6DDC1DD85EDB0096060A /* LyricsView.swift */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -388,6 +402,7 @@
 			files = (
 				902E49DE1DD5DC2100BB817D /* LaunchScreen.storyboard in Resources */,
 				902E49DB1DD5DC2100BB817D /* Assets.xcassets in Resources */,
+				902D6DDB1DD85EA50096060A /* LyricsView.xib in Resources */,
 				902E49D91DD5DC2100BB817D /* Main.storyboard in Resources */,
 				90C2C5101DD7732D009609F1 /* MusicListCell.xib in Resources */,
 			);
@@ -556,6 +571,7 @@
 				90C2C5131DD7F5D5009609F1 /* MusicListTableViewCell.swift in Sources */,
 				9055AEFF1DD61021008CB049 /* MusicListViewController.swift in Sources */,
 				9055AF161DD6B685008CB049 /* Service.swift in Sources */,
+				902D6DDD1DD85EDB0096060A /* LyricsView.swift in Sources */,
 				90C2C51A1DD82011009609F1 /* MusicPlayingViewModel.swift in Sources */,
 				9055AF0B1DD61572008CB049 /* MusicListTableViewModel.swift in Sources */,
 				9055AF101DD6ACEC008CB049 /* MusicModel.swift in Sources */,

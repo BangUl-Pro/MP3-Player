@@ -8,6 +8,7 @@
 
 import UIKit
 import MediaPlayer
+import MarqueeLabel
 
 class MusicPlayingViewController: UIViewController {
     
@@ -26,6 +27,7 @@ class MusicPlayingViewController: UIViewController {
     @IBOutlet weak var playTimeSlider: UISlider!
     @IBOutlet weak var startTimeLabel: UILabel!
     @IBOutlet weak var endTimeLabel: UILabel!
+    @IBOutlet weak var titleLabel: MarqueeLabel!
     
     
     @IBAction func playPausePressed(_ sender: UIButton) {
@@ -78,7 +80,7 @@ class MusicPlayingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if musicPlayer.playbackState == .playing && musicPlayer.nowPlayingItem != viewModel.musicList.items[viewModel.index] {
+        if musicPlayer.playbackState == .playing && !(musicPlayer.nowPlayingItem?.isEqual(viewModel.musicList.items[viewModel.index]))! {
             musicPlayer.stop()
         }
         musicPlayer.setQueue(with: viewModel.musicList)
@@ -108,6 +110,11 @@ class MusicPlayingViewController: UIViewController {
         thread.start()
         
         endTimeLabel.text = "\(Int(playTimeSlider.maximumValue) / 60) : \(Int(playTimeSlider.maximumValue) % 60)"
+        
+        titleLabel.type = .continuous
+        titleLabel.speed = .duration(20)
+        titleLabel.text = musicPlayer.nowPlayingItem?.title
+        print("lyrics = \(musicPlayer.nowPlayingItem?.lyrics)")
     }
     
     func loop() {
