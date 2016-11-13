@@ -14,14 +14,17 @@ class MusicPlayingViewController: UIViewController {
     var viewModel = MusicPlayingViewModel()
    
     let musicPlayer = MPMusicPlayerController()
+    var thread: Thread!
+    
     var volumeView: MPVolumeView!
+    var isPlaying = true
     
     @IBOutlet weak var playPauseBtn: UIButton!
     @IBOutlet weak var repeatBtn: UIButton!
     @IBOutlet weak var changeSequenceBtn: UIButton!
     @IBOutlet weak var volumeFrame: UIView!
+    @IBOutlet weak var playTimeSlider: UISlider!
     
-    var isPlaying = true
     
     @IBAction func playPausePressed(_ sender: UIButton) {
         if isPlaying {
@@ -66,6 +69,9 @@ class MusicPlayingViewController: UIViewController {
         }
     }
     
+    @IBAction func playTimeChanged(_ sender: UISlider) {
+        musicPlayer.currentPlaybackTime = TimeInterval(playTimeSlider.value)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,6 +99,22 @@ class MusicPlayingViewController: UIViewController {
         
         volumeView = MPVolumeView(frame: volumeFrame.bounds)
         volumeFrame.addSubview(volumeView)
+        
+        playTimeSlider.maximumValue = Float((musicPlayer.nowPlayingItem?.playbackDuration)!)
+        
+        thread = Thread(target: self, selector: #selector(MusicPlayingViewController.loop), object: nil)
+        thread.start()
+    }
+    
+    func loop() {
+        while true {
+            if isPlaying {
+                DispatchQueue.main.async {
+                    self.playTimeSlider.setValue(self.playTimeSlider.value + 1, animated: true)
+                }
+            }
+            Thread.sleep(forTimeInterval: 1)
+        }
     }
 }
 

@@ -106,20 +106,29 @@
                                     <constraint firstAttribute="height" constant="30" id="w2E-ZJ-lNo"/>
                                 </constraints>
                             </view>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lkw-Zi-g5U">
+                                <rect key="frame" x="30" y="517" width="315" height="31"/>
+                                <connections>
+                                    <action selector="playTimeChanged:" destination="V2r-yE-A4k" eventType="valueChanged" id="uR2-qs-xgN"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="S8d-aa-CvB" firstAttribute="trailing" secondItem="ukC-4y-3Bc" secondAttribute="trailingMargin" id="0d0-xQ-3La"/>
+                            <constraint firstItem="lkw-Zi-g5U" firstAttribute="leading" secondItem="ukC-4y-3Bc" secondAttribute="leadingMargin" constant="16" id="3Qw-Pd-02v"/>
                             <constraint firstItem="Se7-ro-kFZ" firstAttribute="leading" secondItem="ukC-4y-3Bc" secondAttribute="leadingMargin" id="3j4-ui-aUf"/>
                             <constraint firstItem="SFB-qe-EWz" firstAttribute="centerY" secondItem="Se7-ro-kFZ" secondAttribute="centerY" id="5ES-bm-qEO"/>
                             <constraint firstItem="S8d-aa-CvB" firstAttribute="leading" secondItem="wEV-3z-1ZR" secondAttribute="trailing" constant="16" id="Aeu-Gc-Jqe"/>
                             <constraint firstItem="bnN-Pp-2FP" firstAttribute="centerX" secondItem="ukC-4y-3Bc" secondAttribute="centerX" id="D4V-Jz-z65"/>
+                            <constraint firstItem="bnN-Pp-2FP" firstAttribute="top" secondItem="lkw-Zi-g5U" secondAttribute="bottom" constant="24" id="G4M-kg-9fY"/>
                             <constraint firstItem="bnN-Pp-2FP" firstAttribute="leading" secondItem="Ofw-6P-7OA" secondAttribute="trailing" constant="20" id="Hoi-Nl-h2j"/>
                             <constraint firstItem="S8d-aa-CvB" firstAttribute="centerY" secondItem="Se7-ro-kFZ" secondAttribute="centerY" id="K22-PQ-gHY"/>
                             <constraint firstItem="SFB-qe-EWz" firstAttribute="leading" secondItem="Se7-ro-kFZ" secondAttribute="trailing" constant="8" id="K56-zd-FqM"/>
                             <constraint firstItem="Ofw-6P-7OA" firstAttribute="centerY" secondItem="bnN-Pp-2FP" secondAttribute="centerY" id="TAm-mF-u5d"/>
                             <constraint firstItem="wEV-3z-1ZR" firstAttribute="centerY" secondItem="Se7-ro-kFZ" secondAttribute="centerY" id="X5L-53-0gT"/>
                             <constraint firstItem="SFB-qe-EWz" firstAttribute="top" secondItem="bnN-Pp-2FP" secondAttribute="bottom" constant="16" id="eOW-Kt-EiE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lkw-Zi-g5U" secondAttribute="trailing" constant="16" id="eOk-Kn-kls"/>
                             <constraint firstItem="CVq-4u-1R5" firstAttribute="top" secondItem="Se7-ro-kFZ" secondAttribute="bottom" constant="20" id="g5E-i1-5xL"/>
                             <constraint firstItem="tJr-d0-kCo" firstAttribute="centerY" secondItem="bnN-Pp-2FP" secondAttribute="centerY" id="gK7-Ew-Mtf"/>
                             <constraint firstItem="wEV-3z-1ZR" firstAttribute="leading" secondItem="SFB-qe-EWz" secondAttribute="trailing" constant="8" id="ovj-85-N9d"/>
@@ -129,6 +138,7 @@
                     <connections>
                         <outlet property="changeSequenceBtn" destination="S8d-aa-CvB" id="ENe-Yx-z0r"/>
                         <outlet property="playPauseBtn" destination="bnN-Pp-2FP" id="aYf-89-w1s"/>
+                        <outlet property="playTimeSlider" destination="lkw-Zi-g5U" id="zXt-An-F2n"/>
                         <outlet property="repeatBtn" destination="wEV-3z-1ZR" id="HLz-dc-fte"/>
                         <outlet property="volumeFrame" destination="SFB-qe-EWz" id="26Z-3N-yWY"/>
                     </connections>
