@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="MDL-uz-dD8" customClass="MusicLIstTableViewCell" customModule="VolumeKeeper" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="82"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MDL-uz-dD8" id="SeD-e8-uGW">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="81"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DOR-rt-NyR">
+                        <rect key="frame" x="8" y="8" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="rS5-SU-NZm"/>
+                            <constraint firstAttribute="width" constant="60" id="yYZ-vu-gYz"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Mn-ys-noO">
+                        <rect key="frame" x="76" y="14" width="34" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4o-VR-08f">
+                        <rect key="frame" x="76" y="39" width="49" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="1Mn-ys-noO" firstAttribute="leading" secondItem="DOR-rt-NyR" secondAttribute="trailing" constant="8" id="0z0-t4-Ko9"/>
+                    <constraint firstItem="DOR-rt-NyR" firstAttribute="top" secondItem="SeD-e8-uGW" secondAttribute="topMargin" id="8U4-Kg-Nrz"/>
+                    <constraint firstItem="1Mn-ys-noO" firstAttribute="top" secondItem="SeD-e8-uGW" secondAttribute="topMargin" constant="6" id="SaS-Yl-3dd"/>
+                    <constraint firstItem="w4o-VR-08f" firstAttribute="leading" secondItem="DOR-rt-NyR" secondAttribute="trailing" constant="8" id="Z3q-lY-Zph"/>
+                    <constraint firstItem="w4o-VR-08f" firstAttribute="top" secondItem="1Mn-ys-noO" secondAttribute="bottom" constant="4" id="b1I-f1-CVt"/>
+                    <constraint firstItem="DOR-rt-NyR" firstAttribute="leading" secondItem="SeD-e8-uGW" secondAttribute="leadingMargin" id="gSJ-3E-rVN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="albumLabel" destination="w4o-VR-08f" id="uiM-25-mAY"/>
+                <outlet property="titleImageView" destination="DOR-rt-NyR" id="LqE-p1-4zv"/>
+                <outlet property="titleLabel" destination="1Mn-ys-noO" id="h5N-cp-2Uc"/>
+            </connections>
+            <point key="canvasLocation" x="-153.5" y="-159"/>
+        </tableViewCell>
+    </objects>
+</document>

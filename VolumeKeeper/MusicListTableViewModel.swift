@@ -10,7 +10,7 @@ import Foundation
 import MediaPlayer
 
 class MusicListTableViewModel {
-    var musicList: [MPMediaItem]!
+    var musicList: [MPMediaItem] = []
     
     func loadMusicList(completion: (([MPMediaItem]?) -> Void)?) {
         if #available(iOS 9.3, *) {
@@ -20,8 +20,8 @@ class MusicListTableViewModel {
                 MPMediaLibrary.requestAuthorization({
                     newAuthorizationStatus in
                     if newAuthorizationStatus == .authorized {
-                        self.musicList = MPMediaQuery.songs().items
-                        if let completion = completion {
+                        if let list = MPMediaQuery.songs().items, let completion = completion {
+                            self.musicList = list
                             completion(self.musicList)
                         }
                     }
@@ -31,8 +31,8 @@ class MusicListTableViewModel {
                 return
                 
             default:
-                self.musicList = MPMediaQuery.songs().items
-                if let completion = completion {
+                if let list = MPMediaQuery.songs().items, let completion = completion {
+                    self.musicList = list
                     completion(self.musicList)
                 }
             }
