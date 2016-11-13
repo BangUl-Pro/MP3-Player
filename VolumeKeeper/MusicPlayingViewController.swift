@@ -21,12 +21,18 @@ class MusicPlayingViewController: UIViewController {
     @IBOutlet weak var changeSequenceBtn: UIButton!
     @IBOutlet weak var volumeFrame: UIView!
     
+    var isPlaying = true
+    
     @IBAction func playPausePressed(_ sender: UIButton) {
-        if musicPlayer.playbackState == .playing {
+        if isPlaying {
             musicPlayer.pause()
+            playPauseBtn.setTitle("재생", for: .normal)
         } else {
             musicPlayer.play()
+            playPauseBtn.setTitle("일시정지", for: .normal)
         }
+        
+        isPlaying = !isPlaying
     }
     
     @IBAction func nextSongPlayPressed(_ sender: UIButton) {

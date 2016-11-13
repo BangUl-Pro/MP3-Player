@@ -56,15 +56,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJr-d0-kCo">
-                                <rect key="frame" x="222" y="579" width="43" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJr-d0-kCo">
+                                <rect key="frame" x="233" y="571" width="43" height="30"/>
                                 <state key="normal" title="다음 곡"/>
                                 <connections>
                                     <action selector="nextSongPlayPressed:" destination="V2r-yE-A4k" eventType="touchUpInside" id="8L3-Xs-w8v"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ofw-6P-7OA">
-                                <rect key="frame" x="109" y="579" width="43" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ofw-6P-7OA">
+                                <rect key="frame" x="98" y="571" width="43" height="30"/>
                                 <state key="normal" title="이전 곡"/>
                                 <connections>
                                     <action selector="prevSongPlayPressed:" destination="V2r-yE-A4k" eventType="touchUpInside" id="wqR-Y3-PEi"/>
@@ -91,9 +91,9 @@
                                     <action selector="changeSequenceModePressed:" destination="V2r-yE-A4k" eventType="touchUpInside" id="giU-WN-3bB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnN-Pp-2FP">
-                                <rect key="frame" x="172" y="579" width="30" height="30"/>
-                                <state key="normal" title="재생"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnN-Pp-2FP">
+                                <rect key="frame" x="161" y="571" width="52" height="30"/>
+                                <state key="normal" title="일지정지"/>
                                 <connections>
                                     <action selector="playPausePressed:" destination="V2r-yE-A4k" eventType="touchUpInside" id="hcu-9h-e2d"/>
                                 </connections>
@@ -119,6 +119,7 @@
                             <constraint firstItem="SFB-qe-EWz" firstAttribute="leading" secondItem="Se7-ro-kFZ" secondAttribute="trailing" constant="8" id="K56-zd-FqM"/>
                             <constraint firstItem="Ofw-6P-7OA" firstAttribute="centerY" secondItem="bnN-Pp-2FP" secondAttribute="centerY" id="TAm-mF-u5d"/>
                             <constraint firstItem="wEV-3z-1ZR" firstAttribute="centerY" secondItem="Se7-ro-kFZ" secondAttribute="centerY" id="X5L-53-0gT"/>
+                            <constraint firstItem="SFB-qe-EWz" firstAttribute="top" secondItem="bnN-Pp-2FP" secondAttribute="bottom" constant="16" id="eOW-Kt-EiE"/>
                             <constraint firstItem="CVq-4u-1R5" firstAttribute="top" secondItem="Se7-ro-kFZ" secondAttribute="bottom" constant="20" id="g5E-i1-5xL"/>
                             <constraint firstItem="tJr-d0-kCo" firstAttribute="centerY" secondItem="bnN-Pp-2FP" secondAttribute="centerY" id="gK7-Ew-Mtf"/>
                             <constraint firstItem="wEV-3z-1ZR" firstAttribute="leading" secondItem="SFB-qe-EWz" secondAttribute="trailing" constant="8" id="ovj-85-N9d"/>
