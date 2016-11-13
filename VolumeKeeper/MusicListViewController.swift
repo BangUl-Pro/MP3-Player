@@ -8,6 +8,7 @@
 
 import UIKit
 import MediaPlayer
+import MarqueeLabel
 
 class MusicListViewController: UIViewController {
 

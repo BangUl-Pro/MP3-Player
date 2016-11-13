@@ -7,12 +7,24 @@
 //
 
 import UIKit
+import MarqueeLabel
 
 class MusicLIstTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleImageView: UIImageView!
     
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var titleLabel: MarqueeLabel!
     
     @IBOutlet weak var albumLabel: UILabel!
+    
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        titleLabel.type = .continuous
+        titleLabel.trailingBuffer = 30
+        titleLabel.fadeLength = 10
+        titleLabel.speed = .duration(8)
+        titleLabel.textAlignment = .left
+    }
 }

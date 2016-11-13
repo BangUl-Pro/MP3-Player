@@ -26,8 +26,11 @@
                             <constraint firstAttribute="width" constant="60" id="yYZ-vu-gYz"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Mn-ys-noO">
-                        <rect key="frame" x="76" y="14" width="34" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Mn-ys-noO" customClass="MarqueeLabel" customModule="MarqueeLabel">
+                        <rect key="frame" x="76" y="14" width="291" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="291" id="jJE-bw-XmY"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -51,7 +54,7 @@
             <connections>
                 <outlet property="albumLabel" destination="w4o-VR-08f" id="uiM-25-mAY"/>
                 <outlet property="titleImageView" destination="DOR-rt-NyR" id="LqE-p1-4zv"/>
-                <outlet property="titleLabel" destination="1Mn-ys-noO" id="h5N-cp-2Uc"/>
+                <outlet property="titleLabel" destination="1Mn-ys-noO" id="i8x-3p-F81"/>
             </connections>
             <point key="canvasLocation" x="-153.5" y="-159"/>
         </tableViewCell>
